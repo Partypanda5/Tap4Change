@@ -564,6 +564,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224678414208840816, guid: c92e4c286e24fe0478fca921886b1da7,
     type: 2}
   m_PrefabInternal: {fileID: 645467133}
+--- !u!114 &645467135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114235470851776952, guid: c92e4c286e24fe0478fca921886b1da7,
+    type: 2}
+  m_PrefabInternal: {fileID: 645467133}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &692922715
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,11 +601,11 @@ RectTransform:
   m_Father: {fileID: 1485687536}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 732.98, y: 17.166016}
-  m_SizeDelta: {x: 354, y: 326.51508}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 555.98, y: 17.166016}
+  m_SizeDelta: {x: 454, y: 426.51508}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &692922717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,6 +785,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &734445801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114235470851776952, guid: c92e4c286e24fe0478fca921886b1da7,
+    type: 2}
+  m_PrefabInternal: {fileID: 734445800}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &874723194
 Prefab:
   m_ObjectHideFlags: 0
@@ -944,6 +956,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224678414208840816, guid: c92e4c286e24fe0478fca921886b1da7,
     type: 2}
   m_PrefabInternal: {fileID: 874723194}
+--- !u!114 &874723196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114235470851776952, guid: c92e4c286e24fe0478fca921886b1da7,
+    type: 2}
+  m_PrefabInternal: {fileID: 874723194}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &944911765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1384,7 @@ GameObject:
   - component: {fileID: 1099261071}
   - component: {fileID: 1099261067}
   - component: {fileID: 1099261072}
+  - component: {fileID: 1099261073}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1488,6 +1507,7 @@ MonoBehaviour:
   peopleSprites: []
   peopleParent: {fileID: 1648329682}
   tapTransform: {fileID: 1939816997}
+  gameStarted: 0
 --- !u!114 &1099261069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,6 +1564,33 @@ MonoBehaviour:
   intro1: {fileID: 21300000, guid: c8f502b76ac261f4a8588d9582e67564, type: 3}
   intro2: {fileID: 21300000, guid: 06d8625c300140545a05ce350cbe94b5, type: 3}
   intro3: {fileID: 21300000, guid: 5f79d6d313868834998f4b8f21724ae2, type: 3}
+--- !u!114 &1099261073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099261061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27e986d6c2034c4fab983b625a1dab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allButtons:
+  - {fileID: 874723196}
+  - {fileID: 645467135}
+  - {fileID: 1564141552}
+  - {fileID: 734445801}
+  dishesSprites:
+  - {fileID: 21300000, guid: a939586382b2f494091ca46db48b6cfa, type: 3}
+  - {fileID: 21300000, guid: 395222d522af20145b3614b2b53f473c, type: 3}
+  bodyWashSprites:
+  - {fileID: 21300000, guid: 1fbc6162f3721884fa4c216c1caf963b, type: 3}
+  - {fileID: 21300000, guid: 7366435285936d24fa210329a8228677, type: 3}
+  - {fileID: 21300000, guid: d116802d7f70d594f95c386cdfba0b60, type: 3}
+  clothesWashSprites:
+  - {fileID: 21300000, guid: e0cf45c0a0c1c8249b39e4db5d9cc918, type: 3}
+  - {fileID: 21300000, guid: 726f5ef3fd5164b40a3a83f10d43660f, type: 3}
+  toiletSprite: {fileID: 21300000, guid: 472d07f2f0a147044ac983b929910b8f, type: 3}
 --- !u!1 &1149522958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,6 +2102,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224678414208840816, guid: c92e4c286e24fe0478fca921886b1da7,
     type: 2}
   m_PrefabInternal: {fileID: 1564141550}
+--- !u!114 &1564141552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114235470851776952, guid: c92e4c286e24fe0478fca921886b1da7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1564141550}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1648329682
 GameObject:
   m_ObjectHideFlags: 0
