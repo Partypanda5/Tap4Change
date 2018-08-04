@@ -1427,6 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overlayPanel: {fileID: 385432213}
+  beginButton: {fileID: 0}
   intro1: {fileID: 21300000, guid: c8f502b76ac261f4a8588d9582e67564, type: 3}
   intro2: {fileID: 21300000, guid: 06d8625c300140545a05ce350cbe94b5, type: 3}
   intro3: {fileID: 21300000, guid: 5f79d6d313868834998f4b8f21724ae2, type: 3}
@@ -1860,10 +1861,10 @@ RectTransform:
   m_Father: {fileID: 1485687536}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -228.80005, y: 16.708008}
-  m_SizeDelta: {x: 1369.5, y: 326.51508}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -178.80005, y: 16.708008}
+  m_SizeDelta: {x: 1469.5, y: 426.51508}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648329684
 MonoBehaviour:

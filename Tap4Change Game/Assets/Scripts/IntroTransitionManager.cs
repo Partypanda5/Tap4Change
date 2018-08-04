@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class IntroTransitionManager : MonoBehaviour {
 
 	public GameObject overlayPanel;
+	public GameObject beginButton;
 
 	public Sprite intro1;	
 	public Sprite intro2;	
