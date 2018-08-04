@@ -8,6 +8,8 @@ public class IntroTransitionManager : MonoBehaviour {
 	public GameObject overlayPanel;
 	public GameObject beginButton;
 
+	public GameObject dataPanel1;
+
 	public Sprite intro1;	
 	public Sprite intro2;	
 	public Sprite intro3;	
@@ -16,6 +18,8 @@ public class IntroTransitionManager : MonoBehaviour {
 	void Start () {
 
 	overlayPanel.GetComponent<Image>().sprite = intro1;
+
+	beginButton.SetActive(false);
 		
 	}
 	
@@ -30,8 +34,24 @@ public class IntroTransitionManager : MonoBehaviour {
 
 		   else if (overlayPanel.GetComponent<Image>().sprite == intro2)
 			   	 overlayPanel.GetComponent<Image>().sprite = intro3;
+					
+			if (overlayPanel.GetComponent<Image>().sprite == intro3)
+
+				beginButton.SetActive(true);
 
 		   }
 		
 	}
+
+	public void BeginDataCapture(){
+
+	if (overlayPanel.GetComponent<Image>().sprite == intro3)
+
+				beginButton.SetActive(false);
+				dataPanel1.SetActive(true);
+
+		   }
+
 }
+
+
