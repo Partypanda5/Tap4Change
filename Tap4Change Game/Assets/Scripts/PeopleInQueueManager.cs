@@ -21,6 +21,8 @@ public class PeopleInQueueManager : MonoBehaviour
     public GameObject peopleParent;
     public RectTransform tapTransform;
 
+    public bool gameStarted = false;
+
     void Start()
     {
         instance = this;
@@ -28,21 +30,24 @@ public class PeopleInQueueManager : MonoBehaviour
 
     void Update()
     {
-        if (isCollecting)
+        if (gameStarted)
         {
-            timePassedFetchingWater += Time.deltaTime;
-            if (timePassedFetchingWater > targetTimeToFetchWater)
+            if (isCollecting)
             {
-                StopCollecting();
+                timePassedFetchingWater += Time.deltaTime;
+                if (timePassedFetchingWater > targetTimeToFetchWater)
+                {
+                    StopCollecting();
+                }
             }
-        }
 
-        timePassedToAddPersonToQueue += Time.deltaTime;
+            timePassedToAddPersonToQueue += Time.deltaTime;
 
-        if (timePassedToAddPersonToQueue > targetTimeToAddPersonToQueue)
-        {
-            AddPersonToQueue();
-            timePassedToAddPersonToQueue = 0;
+            if (timePassedToAddPersonToQueue > targetTimeToAddPersonToQueue)
+            {
+                AddPersonToQueue();
+                timePassedToAddPersonToQueue = 0;
+            }
         }
     }
 
@@ -72,18 +77,19 @@ public class PeopleInQueueManager : MonoBehaviour
     {
         if (people.Count >= 1)
         {
-            people[0].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 500, 0, 0));
+            people[0].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1600, 0, 0));
             SetCollecter(people[0].GetComponent<PersonBehaviour>());
             for (int i = people.Count - 1; i > 0; i--)
             {
-                people[i].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 500 - 60*i, 0, 0));
+                people[i].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1600 - 80 * i, 0, 0));
             }
         }
     }
 
     public void AddPersonToQueue()
     {
-        if (people.Count < 19) {
+        if (people.Count < 19)
+        {
             GameObject newPerson = Instantiate(personPrefab) as GameObject;
             newPerson.transform.SetParent(peopleParent.transform);
             newPerson.GetComponent<PersonBehaviour>().Initialize();

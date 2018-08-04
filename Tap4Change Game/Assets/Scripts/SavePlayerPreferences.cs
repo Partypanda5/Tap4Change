@@ -11,7 +11,6 @@ public class SavePlayerPreferences : MonoBehaviour
 	public const string WATER_USAGE_LEVEL_KEY = "WaterUsageLevel";
 
 
-
     private ClothesWashingModel clothesModel;
     private DishWashingModel dishModel;
     private BodyWashingModel bodyModel;
@@ -22,8 +21,12 @@ public class SavePlayerPreferences : MonoBehaviour
     void Start()
     {
         instance = this;
+    }
+
+    public void BeginGame() 
+    {
         CreateModels();
-        SetInitialSelections();
+        DayNightDisplayManager.instance.StartGame();
     }
 
     public void SetInitialDailyValues () {
@@ -95,18 +98,21 @@ public class SavePlayerPreferences : MonoBehaviour
     {
         PlayerPrefs.SetInt(BODY_WASH_KEY, newType);
         bodyModel.myType = (BodyWashingModel.Type)newType;
+        ButtonManager.instance.SetButton("body", newType);
     }
 
     public void SetDishesWashPreference(int newType)
     {
         PlayerPrefs.SetInt(DISHES_WASH_KEY, newType);
         dishModel.myType = (DishWashingModel.Type)newType;
+        ButtonManager.instance.SetButton("dish", newType);
     }
 
     public void SetClothesWashPreference(int newType)
     {
         PlayerPrefs.SetInt(CLOTHES_WASH_KEY, newType);
         clothesModel.myType = (ClothesWashingModel.Type)newType;
+        ButtonManager.instance.SetButton("clothes", newType);
     }
 
 	public void SetWaterLevel (float waterLevel) {

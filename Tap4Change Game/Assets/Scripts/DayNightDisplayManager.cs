@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class DayNightDisplayManager : MonoBehaviour
 {
-
+    public static DayNightDisplayManager instance;
     int systemHour = System.DateTime.Now.Hour;
     public Sprite dayTime;
     public Sprite nightTime;
     public GameObject background;
     public string saveDate;
 
-    void Start()
+    void Start () 
+    {
+        instance = this;
+    }
+
+    public void StartGame()
     {
         if (PlayerPrefs.HasKey("InitialDate"))
         {
@@ -23,17 +28,14 @@ public class DayNightDisplayManager : MonoBehaviour
             if (currentDate != saveDate)
             {
                 PlayerPrefs.SetString("InitialDate", saveDate);
-
+                SavePlayerPreferences.instance.SetInitialDailyValues();
             }
         }
         else
         {
             PlayerPrefs.SetString("InitialDate", saveDate);
         }
-    }
 
-    void Awake()
-    {
         if (systemHour >= 6 && systemHour <= 17)
         {
             background.GetComponent<Image>().sprite = dayTime;
