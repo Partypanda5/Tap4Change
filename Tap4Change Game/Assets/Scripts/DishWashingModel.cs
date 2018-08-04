@@ -10,11 +10,6 @@ public class DishWashingModel : DataModel {
 
     public Type myType;
 
-    public void SetType()
-    {
-        myType = (Type)SavePlayerPreferences.instance.selectedDishesWashType;
-    }
-
     public void AddToWaterUsed()
     {
         switch (myType)
@@ -26,7 +21,7 @@ public class DishWashingModel : DataModel {
                 }
             case (Type.DishWasher):
                 {
-                    WaterTotalManager.instance.AddToTotal(79);
+                    WaterTotalManager.instance.AddToTotal(45);
                     break;
                 }
         }

@@ -13,10 +13,6 @@ public class BodyWashingModel : DataModel
 
 	public Type myType;
 
-	public void SetType() {
-		myType = (Type)SavePlayerPreferences.instance.selectedBodyWashType;
-	}
-
 	public void AddToWaterUsed () {
 		switch (myType) {
 			case (Type.Shower) : {

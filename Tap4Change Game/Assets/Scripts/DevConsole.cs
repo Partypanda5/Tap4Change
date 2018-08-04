@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class DevConsole : MonoBehaviour
 {
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("return"))
         {
-            WaterTotalManager.instance.AddToTotal(1);
+            SavePlayerPreferences.instance.SetBodyWashPreference(0);
+            SavePlayerPreferences.instance.SetClothesWashPreference(0);
+            SavePlayerPreferences.instance.SetDishesWashPreference(0);
+            Debug.Log("do it");
+        }
+        if (Input.GetKeyDown("k"))
+        {
+            SavePlayerPreferences.instance.SetBodyWashPreference(1);
+            SavePlayerPreferences.instance.SetClothesWashPreference(0);
+            SavePlayerPreferences.instance.SetDishesWashPreference(1);
+            Debug.Log("do it");
         }
     }
 }

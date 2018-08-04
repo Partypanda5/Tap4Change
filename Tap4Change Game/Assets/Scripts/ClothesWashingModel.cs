@@ -12,10 +12,6 @@ public class ClothesWashingModel : DataModel
 
 	public Type myType;
 
-    public void SetType()
-    {
-        myType = (Type)SavePlayerPreferences.instance.selectedClothesWashType;
-    }
 
     public void AddToWaterUsed()
     {

@@ -12,11 +12,8 @@ public class DayNightDisplayManager : MonoBehaviour
     public GameObject background;
     public string saveDate;
 
-
-    // Use this for initialization
     void Start()
     {
-
         if (PlayerPrefs.HasKey("InitialDate"))
         {
             saveDate = PlayerPrefs.GetString("InitialDate");
@@ -31,36 +28,20 @@ public class DayNightDisplayManager : MonoBehaviour
         }
         else
         {
-
             PlayerPrefs.SetString("InitialDate", saveDate);
-
         }
-
-
     }
 
-    // Update is called once per frame
     void Awake()
     {
-
         if (systemHour >= 6 && systemHour <= 17)
         {
-
             background.GetComponent<Image>().sprite = dayTime;
-
-
         }
 
         if ((systemHour >= 0 && systemHour <= 5) || (systemHour >= 18))
         {
-
-
             background.GetComponent<Image>().sprite = nightTime;
-
         }
-
-
-
-
     }
 }
