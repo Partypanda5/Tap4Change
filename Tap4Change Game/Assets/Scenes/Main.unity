@@ -1152,6 +1152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35996cfabb883d44ab6ce6e2d7dc8702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayTime: {fileID: 21300000, guid: b0e04eb57f3178e4f9a11846fc2aa35c, type: 3}
+  nightTime: {fileID: 21300000, guid: 9af2372474dac95468f7df7f181cc5f7, type: 3}
+  background: {fileID: 1307576409}
+  saveDate: 
 --- !u!1 &1277082020
 GameObject:
   m_ObjectHideFlags: 0
