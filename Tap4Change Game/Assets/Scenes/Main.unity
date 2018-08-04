@@ -262,6 +262,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 357927170}
     m_Modifications:
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224678414208840816, guid: c92e4c286e24fe0478fca921886b1da7,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -354,7 +359,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1331726334813492, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
       propertyPath: m_Name
-      value: player_Input (1)
+      value: toilet_button
       objectReference: {fileID: 0}
     - target: {fileID: 114235470851776952, guid: c92e4c286e24fe0478fca921886b1da7,
         type: 2}
@@ -366,6 +371,51 @@ Prefab:
         type: 2}
       propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1099261065}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1099261061}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddWaterUsage
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
@@ -452,6 +502,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 357927170}
     m_Modifications:
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224678414208840816, guid: c92e4c286e24fe0478fca921886b1da7,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -544,7 +599,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1331726334813492, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
       propertyPath: m_Name
-      value: player_Input (3)
+      value: clothes_button
       objectReference: {fileID: 0}
     - target: {fileID: 114235470851776952, guid: c92e4c286e24fe0478fca921886b1da7,
         type: 2}
@@ -557,6 +612,31 @@ Prefab:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1099261065}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddWaterUsage
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
   m_IsPrefabAsset: 0
@@ -567,6 +647,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 357927170}
     m_Modifications:
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224678414208840816, guid: c92e4c286e24fe0478fca921886b1da7,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -677,6 +762,40 @@ Prefab:
         type: 2}
       propertyPath: m_PreserveAspect
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331726334813492, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
+      propertyPath: m_Name
+      value: dishes_button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1099261065}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddWaterUsage
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
@@ -869,9 +988,10 @@ GameObject:
   - component: {fileID: 1099261070}
   - component: {fileID: 1099261069}
   - component: {fileID: 1099261068}
-  - component: {fileID: 1099261067}
   - component: {fileID: 1099261066}
   - component: {fileID: 1099261065}
+  - component: {fileID: 1099261071}
+  - component: {fileID: 1099261067}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -970,14 +1090,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099261061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc585c51caa856840b345f0f760c3e89, type: 3}
+  m_Script: {fileID: 11500000, guid: 26891e07e5dcde84dad016d15fbf2238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  people: []
-  personPrefab: {fileID: 1821987614939900, guid: 113c4fef46bce3f4c9b6607ad1acff75,
-    type: 2}
-  peopleSprites: []
-  peopleParent: {fileID: 1648329682}
+  selectedBodyWashType: 0
+  selectedDishesWashType: 0
+  selectedClothesWashType: 0
 --- !u!114 &1099261068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,15 +1107,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cebf76d2f0c98c419eb15136450db6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTimeToFetchWater: 100
-  targetTimeToAddPersonToQueue: 10
+  targetTimeToFetchWater: 7
+  targetTimeToAddPersonToQueue: 8
   isCollecting: 0
   currentCollectingPerson: {fileID: 0}
   people: []
-  personPrefab: {fileID: 0}
+  personPrefab: {fileID: 1821987614939900, guid: 113c4fef46bce3f4c9b6607ad1acff75,
+    type: 2}
   peopleSprites: []
-  peopleParent: {fileID: 0}
-  tapTransform: {fileID: 0}
+  peopleParent: {fileID: 1648329682}
+  tapTransform: {fileID: 1939816997}
 --- !u!114 &1099261069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,6 +1137,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8beabada74d8043a10ae0187309f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topDamLevel: {fileID: 474896653}
+  midDamLevel: {fileID: 1948316078}
+--- !u!114 &1099261071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099261061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35996cfabb883d44ab6ce6e2d7dc8702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1277082020
@@ -1236,6 +1368,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 357927170}
     m_Modifications:
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224678414208840816, guid: c92e4c286e24fe0478fca921886b1da7,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1328,7 +1465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1331726334813492, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
       propertyPath: m_Name
-      value: player_Input (2)
+      value: shower_button
       objectReference: {fileID: 0}
     - target: {fileID: 114235470851776952, guid: c92e4c286e24fe0478fca921886b1da7,
         type: 2}
@@ -1340,6 +1477,36 @@ Prefab:
         type: 2}
       propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1099261065}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddWaterUsage
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472409254694978, guid: c92e4c286e24fe0478fca921886b1da7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92e4c286e24fe0478fca921886b1da7, type: 2}
