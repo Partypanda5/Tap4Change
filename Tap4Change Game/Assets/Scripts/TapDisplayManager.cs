@@ -18,7 +18,13 @@ public class TapDisplayManager : MonoBehaviour {
 		instance = this;
 	}
 
-	public void ChangeTapState (TapState stateToChangeTo) {
-		currState = stateToChangeTo;
+	public void ChangeTapState () {
+		if (WaterTotalManager.instance.totalWaterUsagePercentage >= 59) {
+			currState = TapState.Flow;
+		} else if (WaterTotalManager.instance.totalWaterUsagePercentage > 4) {
+			currState = TapState.Drip;
+		} else {
+			currState = TapState.Dry;
+		}
 	}
 }

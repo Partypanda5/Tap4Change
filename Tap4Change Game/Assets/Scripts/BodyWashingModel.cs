@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class BodyWashingModel : DataModel {
 	public enum Type {
-		Shower = 9,
+		Shower,
 		Bath,
 		SpongeBath
 	}
 
-	//Shower is 9 liters p/m
-
-	
 }
