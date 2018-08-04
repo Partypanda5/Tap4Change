@@ -3,55 +3,72 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IntroTransitionManager : MonoBehaviour {
+public class IntroTransitionManager : MonoBehaviour
+{
 
-	public GameObject overlayPanel;
-	public GameObject beginButton;
+    public GameObject overlayPanel;
 
-	public GameObject dataPanel1;
+    public GameObject dataPanel1;
+    public GameObject dataPanel2;
+    public GameObject dataPanel3;
+    public GameObject dataPanel4;
 
-	public Sprite intro1;	
-	public Sprite intro2;	
-	public Sprite intro3;	
+    public GameObject whiteBackGround;
 
-	// Use this for initialization
-	void Start () {
+    private int currActivePanel;
 
-	overlayPanel.GetComponent<Image>().sprite = intro1;
+    public void BeginDataCapture()
+    {
+        if (PlayerPrefs.HasKey("PlayerPlayed"))
+        {
+            dataPanel1.SetActive(false);
+            whiteBackGround.SetActive(false);
+            overlayPanel.SetActive(false);
+            StartGame();
+        }
+        else
+        {
+            dataPanel1.SetActive(true);
+            overlayPanel.SetActive(false);
+            currActivePanel = 1;
+            PlayerPrefs.SetString("PlayerPlayed", "true");
+        }
+    }
 
-	beginButton.SetActive(false);
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public void SwitchPanel()
+    {
+        switch (currActivePanel)
+        {
+            case (1):
+                {
+                    dataPanel1.SetActive(false);
+                    dataPanel2.SetActive(true);
+                    currActivePanel = 2;
+                    break;
+                }
+            case (2):
+                {
+                    dataPanel2.SetActive(false);
+                    dataPanel3.SetActive(true);
+                    currActivePanel = 3;
+                    break;
+                }
+            case (3):
+                {
+                    dataPanel3.SetActive(false);
+                    dataPanel4.SetActive(true);
+                    break;
+                }
+        }
+    }
 
-		 if(Input.GetMouseButtonDown(0)){
-
-			 if (overlayPanel.GetComponent<Image>().sprite == intro1)
-				 overlayPanel.GetComponent<Image>().sprite = intro2;
-
-
-		   else if (overlayPanel.GetComponent<Image>().sprite == intro2)
-			   	 overlayPanel.GetComponent<Image>().sprite = intro3;
-					
-			if (overlayPanel.GetComponent<Image>().sprite == intro3)
-
-				beginButton.SetActive(true);
-
-		   }
-		
-	}
-
-	public void BeginDataCapture(){
-
-	if (overlayPanel.GetComponent<Image>().sprite == intro3)
-
-				beginButton.SetActive(false);
-				dataPanel1.SetActive(true);
-
-		   }
-
+    public void StartGame()
+    {
+        dataPanel4.SetActive(false);
+        PeopleInQueueManager.instance.StartGame();
+        DayNightDisplayManager.instance.StartGame();
+        whiteBackGround.SetActive(false);
+    }
 }
 
 

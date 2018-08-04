@@ -28,6 +28,10 @@ public class PeopleInQueueManager : MonoBehaviour
         instance = this;
     }
 
+    public void StartGame() {
+        gameStarted = true;
+    }
+
     void Update()
     {
         if (gameStarted)
@@ -77,18 +81,18 @@ public class PeopleInQueueManager : MonoBehaviour
     {
         if (people.Count >= 1)
         {
-            people[0].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1600, 0, 0));
+            people[0].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1550, 0, 0));
             SetCollecter(people[0].GetComponent<PersonBehaviour>());
             for (int i = people.Count - 1; i > 0; i--)
             {
-                people[i].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1600 - 80 * i, 0, 0));
+                people[i].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1550 - 140 * i, 0, 0));
             }
         }
     }
 
     public void AddPersonToQueue()
     {
-        if (people.Count < 19)
+        if (people.Count < 10)
         {
             GameObject newPerson = Instantiate(personPrefab) as GameObject;
             newPerson.transform.SetParent(peopleParent.transform);

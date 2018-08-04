@@ -16,6 +16,8 @@ public class PersonBehaviour : MonoBehaviour
 
     public bool isCollecter = false;
 
+    private float maxMovement = 10;
+
     public void Initialize()
     {
         myImg = this.GetComponent<Image>();
@@ -23,6 +25,7 @@ public class PersonBehaviour : MonoBehaviour
         myTransform.localScale = new Vector3(1, 1, 1);
         myTransform.localPosition = new Vector3(-20, 0, 0);
         targetLocation = myTransform.localPosition;
+        maxMovement = Random.Range(0.9f, 1);
     }
 
     void Update()
@@ -39,7 +42,7 @@ public class PersonBehaviour : MonoBehaviour
 
     public void MoveForward()
     {
-        myTransform.localPosition = Vector3.MoveTowards(myTransform.localPosition, targetLocation, 1);
+        myTransform.localPosition = Vector3.MoveTowards(myTransform.localPosition, targetLocation, maxMovement);
         if (Vector3.Distance(myTransform.localPosition, targetLocation) < 0.1f)
         {
             isMoving = false;

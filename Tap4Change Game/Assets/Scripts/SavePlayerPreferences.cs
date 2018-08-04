@@ -21,12 +21,7 @@ public class SavePlayerPreferences : MonoBehaviour
     void Start()
     {
         instance = this;
-    }
-
-    public void BeginGame() 
-    {
         CreateModels();
-        DayNightDisplayManager.instance.StartGame();
     }
 
     public void SetInitialDailyValues () {

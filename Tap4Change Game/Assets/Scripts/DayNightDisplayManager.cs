@@ -23,8 +23,7 @@ public class DayNightDisplayManager : MonoBehaviour
         {
             saveDate = PlayerPrefs.GetString("InitialDate");
 
-            string currentDate = System.DateTime.Now.ToString();
-
+            string currentDate = System.DateTime.Now.Date.ToShortDateString();
             if (currentDate != saveDate)
             {
                 PlayerPrefs.SetString("InitialDate", saveDate);
@@ -33,6 +32,7 @@ public class DayNightDisplayManager : MonoBehaviour
         }
         else
         {
+            saveDate = System.DateTime.Now.Date.ToShortDateString();
             PlayerPrefs.SetString("InitialDate", saveDate);
         }
 
