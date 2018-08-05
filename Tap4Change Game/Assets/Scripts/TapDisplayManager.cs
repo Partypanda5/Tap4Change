@@ -18,9 +18,10 @@ public class TapDisplayManager : MonoBehaviour
     [SerializeField]
     private GameObject tapWater;
 
-    public Sprite[] tapSprites;
-
     private TapState currState { get; set; }
+
+    private float targetHeight = 255;
+    private bool changeHeight = false;
 
     void Start()
     {
@@ -32,12 +33,10 @@ public class TapDisplayManager : MonoBehaviour
         if (WaterTotalManager.instance.totalWaterUsagePercentage >= 59)
         {
             currState = TapState.Flow;
-            tapWater.GetComponent<Image>().sprite = tapSprites[0];
         }
         else if (WaterTotalManager.instance.totalWaterUsagePercentage > 4)
         {
             currState = TapState.Drip;
-            tapWater.GetComponent<Image>().sprite = tapSprites[1];
         }
         else
         {
@@ -45,11 +44,14 @@ public class TapDisplayManager : MonoBehaviour
         }
     }
 
-    public void DisplayWater () {
-        if (tapWater.activeSelf) {
+    public void DisplayWater()
+    {
+        if (tapWater.activeSelf)
+        {
             tapWater.SetActive(false);
         }
-        else {
+        else
+        {
             tapWater.SetActive(true);
         }
     }

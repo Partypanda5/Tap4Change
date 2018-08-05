@@ -8,6 +8,8 @@ public class IntroTransitionManager : MonoBehaviour
 
     public GameObject overlayPanel;
 
+    public GameObject welcomePanel;
+
     public GameObject dataPanel1;
     public GameObject dataPanel2;
     public GameObject dataPanel3;
@@ -16,6 +18,22 @@ public class IntroTransitionManager : MonoBehaviour
     public GameObject whiteBackGround;
 
     private int currActivePanel;
+
+    public Sprite[] welcomScreens;
+
+
+    public void SelectStartScreen () {
+        if (PlayerPrefs.HasKey("PlayerPlayed"))
+        {
+            overlayPanel.GetComponent<Image>().sprite = welcomScreens[1];
+        }
+        else
+        {
+            overlayPanel.GetComponent<Image>().sprite = welcomScreens[1];
+        }
+        overlayPanel.SetActive(true);
+        welcomePanel.SetActive(false);
+    }
 
     public void BeginDataCapture()
     {

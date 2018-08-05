@@ -16,7 +16,6 @@ public class WaterTotalManager : MonoBehaviour
 
     public void AddToTotal(int amountToAdd)
     {
-        Debug.Log("add to total called with: " + amountToAdd);
         if (totalWaterUsage < 230)
         {
             totalWaterUsage += amountToAdd;

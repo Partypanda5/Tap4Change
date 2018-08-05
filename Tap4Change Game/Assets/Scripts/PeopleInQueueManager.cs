@@ -40,7 +40,7 @@ public class PeopleInQueueManager : MonoBehaviour
     public void StartGame() {
         gameStarted = true;
         AddPersonToQueue();
-        timePassedToAddPersonToQueue = 5;
+        timePassedToAddPersonToQueue = 4;
     }
 
     void Update()
