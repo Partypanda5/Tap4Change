@@ -24,7 +24,7 @@ public class ClothesWashingModel : DataModel
                 }
             case (Type.WashingMachine):
                 {
-                    WaterTotalManager.instance.AddToTotal(79);
+                    WaterTotalManager.instance.AddToTotal(75);
                     break;
                 }
         }

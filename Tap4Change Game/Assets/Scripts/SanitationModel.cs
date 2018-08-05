@@ -5,6 +5,6 @@ using UnityEngine;
 public class SanitationModel : DataModel {
 	
     public void AddToWaterUsed () {
-        WaterTotalManager.instance.AddToTotal(63);
+        WaterTotalManager.instance.AddToTotal(15);
     }
 }

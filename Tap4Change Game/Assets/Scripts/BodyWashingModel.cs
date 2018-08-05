@@ -16,11 +16,11 @@ public class BodyWashingModel : DataModel
 	public void AddToWaterUsed () {
 		switch (myType) {
 			case (Type.Shower) : {
-				WaterTotalManager.instance.AddToTotal(9);
+				WaterTotalManager.instance.AddToTotal(15);
 				break;
 			}
 			case (Type.Bath) : {
-				WaterTotalManager.instance.AddToTotal(50);
+				WaterTotalManager.instance.AddToTotal(60);
 				break;
 			}
 			case (Type.SpongeBath) : {

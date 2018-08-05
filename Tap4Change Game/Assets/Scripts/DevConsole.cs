@@ -8,7 +8,7 @@ public class DevConsole : MonoBehaviour
     {
         if (Input.GetKeyDown("return"))
         {
-            PlayerPrefs.DeleteAll();
+            
         }
     }
 }

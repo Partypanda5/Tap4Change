@@ -23,6 +23,15 @@ public class PeopleInQueueManager : MonoBehaviour
 
     public bool gameStarted = false;
 
+    public enum PersonType{
+        Lady,
+        Boy,
+        FatMan,
+        Ouma
+    }
+
+    public RuntimeAnimatorController[] animControllers;
+
     void Start()
     {
         instance = this;
@@ -30,6 +39,8 @@ public class PeopleInQueueManager : MonoBehaviour
 
     public void StartGame() {
         gameStarted = true;
+        AddPersonToQueue();
+        timePassedToAddPersonToQueue = 5;
     }
 
     void Update()
@@ -65,6 +76,7 @@ public class PeopleInQueueManager : MonoBehaviour
     {
         isCollecting = true;
         timePassedFetchingWater = 0;
+        TapDisplayManager.instance.DisplayWater();
     }
 
     public void StopCollecting()
@@ -75,17 +87,18 @@ public class PeopleInQueueManager : MonoBehaviour
         SetCollecter(people[0].GetComponent<PersonBehaviour>());
         SetAllTargetLocations();
         MoveQueueForward();
+        TapDisplayManager.instance.DisplayWater();
     }
 
     public void SetAllTargetLocations()
     {
         if (people.Count >= 1)
         {
-            people[0].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1550, 0, 0));
+            people[0].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1600, 0, -20));
             SetCollecter(people[0].GetComponent<PersonBehaviour>());
             for (int i = people.Count - 1; i > 0; i--)
             {
-                people[i].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1550 - 140 * i, 0, 0));
+                people[i].GetComponent<PersonBehaviour>().SetTargetLocation(new Vector3(tapTransform.localPosition.x + 1600 - 140 * i, 0, -20));
             }
         }
     }
@@ -96,7 +109,8 @@ public class PeopleInQueueManager : MonoBehaviour
         {
             GameObject newPerson = Instantiate(personPrefab) as GameObject;
             newPerson.transform.SetParent(peopleParent.transform);
-            newPerson.GetComponent<PersonBehaviour>().Initialize();
+            int randType = Random.Range(0, 4);
+            newPerson.GetComponent<PersonBehaviour>().Initialize(0);
             people.Add(newPerson);
             SetAllTargetLocations();
             newPerson.GetComponent<PersonBehaviour>().StartMove();
@@ -125,5 +139,9 @@ public class PeopleInQueueManager : MonoBehaviour
         {
             targetTimeToFetchWater = 180;
         }
+    }
+
+    public RuntimeAnimatorController GetAnimationController(int personType){
+        return animControllers[personType];
     }
 }
